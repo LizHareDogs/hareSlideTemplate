@@ -10,7 +10,7 @@ sp.canelon@protonmail.com
 
 1. prefer light text on dark background
 
-2. I[logo](ben2.jpg)
+2. I[logo](ben2.jpg) (in current directory but doesn't display here for some reason)
 
 3. I am totally out of the loop on fonts. I know they're super cool and influence readability. And also give some emotional context.I only remember really old ones like Times Ariel, Helvetica. Need advice! :)
 
