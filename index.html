@@ -4,7 +4,7 @@
     <title>Presentation Title</title>
     <meta charset="utf-8" />
     <meta name="date" content="2021-10-01" />
-    <script src="index_files/header-attrs/header-attrs.js"></script>
+    <script src="index_files/header-attrs-2.11/header-attrs.js"></script>
     <meta name="description" content="Presentation Title"/>
     <meta name="generator" content="xaringan and remark.js"/>
     <meta name="github-repo" content="LizHareDogs/ConferenceTalkRepo"/>
@@ -24,10 +24,10 @@
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="en_US"/>
     <meta property="article:author" content="Liz Hare"/>
-    <link href="index_files/tile-view/tile-view.css" rel="stylesheet" />
-    <script src="index_files/tile-view/tile-view.js"></script>
-    <script src="index_files/tone/Tone.js"></script>
-    <script src="index_files/slide-tone/slide-tone.js"></script>
+    <link href="index_files/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="index_files/tile-view-0.2.6/tile-view.js"></script>
+    <script src="index_files/tone-13.8.34/Tone.js"></script>
+    <script src="index_files/slide-tone-0.2.6/slide-tone.js"></script>
     <link rel="stylesheet" href="css/xaringan-themer.css" type="text/css" />
     <link rel="stylesheet" href="css/custom.css" type="text/css" />
   </head>
@@ -47,21 +47,33 @@
 
 
 
-class: bottom, title
-background-image: url(img/ben2.jpg)
-background-position: 95% 10%
-background-size: 200px
+class: top, title
 
 &lt;!-- this slide has the Dog Genetics, LLC logo in the top right corner, added using the "background" image classes above. The text begins on the bottom left corner of the slide --&gt;
 
-# Presentation Title
-## Conference Name
+.left-col-narrow[.center[
+&lt;br&gt;
+&lt;!--inserting the IWDBA logo that links to the IWDC 2021 page--&gt;
+&lt;a href="https://www.iwdba.org/event/iwdc-2021/"&gt;&lt;img src="img/iwdbaLogo.png" alt="International Working Dog Breeding Association" width="80%"/&gt;&lt;/a&gt;
+.titleConf[Conference Name]
+]]
 
-### Liz Hare, PhD&lt;br&gt;@DogGeneticsLLC <svg aria-label="Twitter" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+.right-col-wide[
+.left[
+# Presentation Title
+&lt;!--inserting a horizontal bar for aesthetic appeal --&gt;
+
+----
+]]
+
+.titleAuthor[
+Liz Hare, PhD&lt;br&gt;@DogGeneticsLLC <svg aria-label="Twitter" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+]
 
 ---
-class: middle, center
+class: bottom, center
 
+.pull-left[
 &lt;img style="border-radius: 50%;" 
 src="img/Profile_LH.jpg"
 alt=""
@@ -74,13 +86,25 @@ width="250px"
 [<svg aria-label="Twitter" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Twitter</title><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> @DogGeneticsLLC](https://twitter.com/DogGeneticsLLC)&lt;br&gt;
 [<svg aria-label="GitHub" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>GitHub</title><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg> @LizHareDogs](https://github.com/LizHareDogs)&lt;br&gt;
 [<svg aria-label="Envelope" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><title>Envelope</title><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg> LizHare@DogGenetics.com](mailto:LizHare@DogGenetics.com)
+]&lt;!--end of pull left--&gt;
 
-???
-Hello! My name is Liz Hare and I'm a Canine Genetics and Genomics Consultant.
+.pull-right[
 
-This slide uses:
-- the `inverse`, `middle`, and `center` slide classes
-- an image inserted with html
+## Collaborators
+
+.large[Person 1]
+
+Person 1 affiliations
+
+.large[Person 2] 
+
+Person 2 affiliations
+
+.large[Person 3]
+
+Person 3 affiliations
+
+] &lt;!--end of pull right--&gt;
 
 ---
 background-image: url(img/avahi-cleesei.jpg)
@@ -137,6 +161,8 @@ This slide uses:
 - a horizontal bar
 - the `.footnote[]` class
 
+This slide also uses the .left-column[] and .right-column[] classes. The left column occupies the left 20% of the slide and the right column the right 75% of the slide. Because the left column is so narrow, it looks best when only a couple of words occupy that space
+
 ---
 # Inserting images
 
@@ -164,6 +190,8 @@ This slide uses:
 - an image and accompanying alternative text inserted with `![]()`
 - `.pull-left[]` and `.pull-right[]` classes
 - the `.footnote[]` class
+
+This slide also uses the .pull-left[] and .pull-right[] classes. Each column occupies half of the slide space.
 
 ---
 # Tables
@@ -216,26 +244,6 @@ The `lemur_data` dataset contains life histories for a variety of lemurs housed 
    &lt;td style="text-align:right;"&gt; 1.55 &lt;/td&gt;
    &lt;td style="text-align:right;"&gt; 1689 &lt;/td&gt;
   &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Aye-Aye &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Ardrey &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Y &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 1996-04-15 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; captive &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; NA &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 22.83 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 2860 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Aye-Aye &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; Ardrey-A &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; N &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 2000-12-15 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; captive &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; 2000-12-20 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 0.01 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 91 &lt;/td&gt;
-  &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
@@ -251,15 +259,16 @@ This slide uses:
 ---
 # Highlighting code
 
-`&gt; Inline code is differentiated by a monospace font face`
+`&gt; Inline code is differentiated primarily by a monospace font face`
 
 You can highlight lines of code within code chunks using `#&lt;&lt;`. This adds a light gold background to the highlighted line of code, like to the `geom_histogram()` line in the example code chunk below:
+
 
 ```r
 lemurs %&gt;% filter(birth_type != "unknown") %&gt;%
   ggplot(aes(x = dob, fill = birth_type)) +
-  geom_histogram() +              #&lt;&lt;
-  minimal_theme()
+* geom_histogram() +
+  theme_minimal()
 ```
 
 ???
@@ -271,7 +280,7 @@ This slide uses:
 
 &lt;!-- this slide creates a plot with a code chunk and that takes up the entire slide area --&gt;
 
-&lt;img src="index_files/figure-html/unnamed-chunk-1-1.png" title="Histogram of unique lemur births between 1975 and 2019 showing more births took place in captivity than in the wild, with most births concentrated between 1975 and 2000. Births in the wild peaked near 1985 at almost 300 births and again near 2012 at about 100 births. Births in captivity had a plateau between 1980 and 1985 at about 25 births" alt="Histogram of unique lemur births between 1975 and 2019 showing more births took place in captivity than in the wild, with most births concentrated between 1975 and 2000. Births in the wild peaked near 1985 at almost 300 births and again near 2012 at about 100 births. Births in captivity had a plateau between 1980 and 1985 at about 25 births" width="4200" style="display: block; margin: auto;" /&gt;
+&lt;img src="index_files/figure-html/unnamed-chunk-2-1.png" title="Histogram of unique lemur births between 1975 and 2019 showing more births took place in captivity than in the wild, with most births concentrated between 1975 and 2000. Births in the wild peaked near 1985 at almost 300 births and again near 2012 at about 100 births. Births in captivity had a plateau between 1980 and 1985 at about 25 births" alt="Histogram of unique lemur births between 1975 and 2019 showing more births took place in captivity than in the wild, with most births concentrated between 1975 and 2000. Births in the wild peaked near 1985 at almost 300 births and again near 2012 at about 100 births. Births in captivity had a plateau between 1980 and 1985 at about 25 births" width="4200" style="display: block; margin: auto;" /&gt;
 
 ???
 This slide uses:

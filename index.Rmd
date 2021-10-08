@@ -51,8 +51,8 @@ style_duo_accent_inverse(
   white_color = "#F5F5F5", # off-white color (text)
   black_color = "#14213D", # dark navy blue color (slide background)
   base_font_size = "25px",
-  header_h1_font_size = "2.75rem",
-  header_h2_font_size = "2.25rem",
+  header_h1_font_size = "2.25rem",
+  header_h2_font_size = "2.0rem",
   header_h3_font_size = "1.75rem",
   link_decoration = "underline",
   table_row_even_background_color = "#313C54", # lighter navy color
@@ -61,9 +61,9 @@ style_duo_accent_inverse(
   header_background_content_padding_top = "5rem",
   footnote_position_bottom = "40px",
   outfile = "css/xaringan-themer.css",
-  text_font_family = "Atkinson Hyperlegible",
-  text_font_google = google_font("Atkinson Hyperlegible"),
-  header_font_google = google_font("Atkinson Hyperlegible"),
+  text_font_family = "Red Hat Text",
+  text_font_google = google_font("Red Hat Text"),
+  header_font_google = google_font("Red Hat Text"),
   extra_css = list(
     # the following css styles the horizontal bars
     "hr" = list("color" = "#C6B78A",
@@ -116,21 +116,33 @@ knitr::opts_chunk$set(collapse = TRUE,
 lemurs <- readRDS("data/lemurs.rds")
 ```
 
-class: bottom, title
-background-image: url(img/ben2.jpg)
-background-position: 95% 10%
-background-size: 200px
+class: top, title
 
 <!-- this slide has the Dog Genetics, LLC logo in the top right corner, added using the "background" image classes above. The text begins on the bottom left corner of the slide -->
 
-# `r rmarkdown::metadata$title`
-## `r rmarkdown::metadata$subtitle`
+.left-col-narrow[.center[
+<br>
+<!--inserting the IWDBA logo that links to the IWDC 2021 page-->
+<a href="https://www.iwdba.org/event/iwdc-2021/"><img src="img/iwdbaLogo.png" alt="International Working Dog Breeding Association" width="80%"/></a>
+.titleConf[`r rmarkdown::metadata$subtitle`]
+]]
 
-### `r rmarkdown::metadata$author`<br>@DogGeneticsLLC `r fa("twitter", a11y="sem")`
+.right-col-wide[
+.left[
+# `r rmarkdown::metadata$title`
+<!--inserting a horizontal bar for aesthetic appeal -->
+
+----
+]]
+
+.titleAuthor[
+`r rmarkdown::metadata$author`<br>@DogGeneticsLLC `r fa("twitter", a11y="sem")`
+]
 
 ---
-class: middle, center
+class: bottom, center
 
+.pull-left[
 <img style="border-radius: 50%;" 
 src="img/Profile_LH.jpg"
 alt=""
@@ -143,13 +155,25 @@ width="250px"
 [`r fa("twitter", a11y="sem")` @DogGeneticsLLC](https://twitter.com/DogGeneticsLLC)<br>
 [`r fa("github", a11y="sem")` @LizHareDogs](https://github.com/LizHareDogs)<br>
 [`r fa("envelope", a11y="sem")` LizHare@DogGenetics.com](mailto:LizHare@DogGenetics.com)
+]<!--end of pull left-->
 
-???
-Hello! My name is Liz Hare and I'm a Canine Genetics and Genomics Consultant.
+.pull-right[
 
-This slide uses:
-- the `inverse`, `middle`, and `center` slide classes
-- an image inserted with html
+## Collaborators
+
+.large[Person 1]
+
+Person 1 affiliations
+
+.large[Person 2] 
+
+Person 2 affiliations
+
+.large[Person 3]
+
+Person 3 affiliations
+
+] <!--end of pull right-->
 
 ---
 background-image: url(img/avahi-cleesei.jpg)
@@ -206,6 +230,8 @@ This slide uses:
 - a horizontal bar
 - the `.footnote[]` class
 
+This slide also uses the .left-column[] and .right-column[] classes. The left column occupies the left 20% of the slide and the right column the right 75% of the slide. Because the left column is so narrow, it looks best when only a couple of words occupy that space
+
 ---
 # Inserting images
 
@@ -234,6 +260,8 @@ This slide uses:
 - `.pull-left[]` and `.pull-right[]` classes
 - the `.footnote[]` class
 
+This slide also uses the .pull-left[] and .pull-right[] classes. Each column occupies half of the slide space.
+
 ---
 # Tables
 
@@ -242,7 +270,7 @@ The `lemur_data` dataset contains life histories for a variety of lemurs housed 
 <!-- this slide includes an HTML table with knitr::kable() and it takes up the entire width of the text area of the slide and ends right above the footnote -->
 
 ```{r lemur-births, echo=FALSE}
-knitr::kable(head(lemurs[,1:8],5), format = 'html')
+knitr::kable(head(lemurs[,1:8],3), format = 'html')
 ```
 
 .footnote[
@@ -257,15 +285,15 @@ This slide uses:
 ---
 # Highlighting code
 
-`> Inline code is differentiated by a monospace font face`
+`> Inline code is differentiated primarily by a monospace font face`
 
 You can highlight lines of code within code chunks using `#<<`. This adds a light gold background to the highlighted line of code, like to the `geom_histogram()` line in the example code chunk below:
 
-```r
+```{r, eval=FALSE, echo=TRUE}
 lemurs %>% filter(birth_type != "unknown") %>%
   ggplot(aes(x = dob, fill = birth_type)) +
   geom_histogram() +              #<<
-  minimal_theme()
+  theme_minimal()
 ```
 
 ???
@@ -277,7 +305,10 @@ This slide uses:
 
 <!-- this slide creates a plot with a code chunk and that takes up the entire slide area -->
 
-```{r, eval=TRUE, echo=FALSE, fig.height=8, fig.width=14, fig.alt="Histogram of unique lemur births between 1975 and 2019 showing more births took place in captivity than in the wild, with most births concentrated between 1975 and 2000. Births in the wild peaked near 1985 at almost 300 births and again near 2012 at about 100 births. Births in captivity had a plateau between 1980 and 1985 at about 25 births"}
+```{r, eval=TRUE, echo=FALSE, fig.showtext=TRUE, fig.height=8, fig.width=14, fig.alt="Histogram of unique lemur births between 1975 and 2019 showing more births took place in captivity than in the wild, with most births concentrated between 1975 and 2000. Births in the wild peaked near 1985 at almost 300 births and again near 2012 at about 100 births. Births in captivity had a plateau between 1980 and 1985 at about 25 births"}
+library(dplyr)
+library(ggplot2)
+
 lemurs %>% filter(birth_type != "unknown") %>%
   ggplot(aes(x = dob, fill = birth_type)) +
   geom_histogram() +
